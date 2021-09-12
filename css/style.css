@@ -41,8 +41,7 @@ header nav ul{
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 3em;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -123,6 +122,7 @@ article section.tasks{
 
 #courses article a{
 width: 280px;
+color:#00274C;
 }
 
 #courses article a:hover{

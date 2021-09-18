@@ -2,6 +2,14 @@ a {
     text-decoration: none;
 }
 
+.material-icons{
+    font-family: 'Material Icons';
+}
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+.material-icons.md-dark.md-active{color:#ffff02;}
+
 figure img{
     max-width: 350px;
     border-radius: 50%;
@@ -16,6 +24,14 @@ body{
     font-size: 20px;
 }
 
+.lights {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 14px;
+    position: relative;
+    left: 35%;
+    z-index: 0;
+}
+
 header{
     width: 100%;
     position:fixed;
@@ -23,6 +39,7 @@ header{
     display: flex;
     align-items: flex-end;
     border-bottom: #00274C 2px solid;
+    z-index: 1;
 }
 
 h1{
@@ -56,6 +73,7 @@ nav ul li a{
 nav ul li a:hover{
     text-decoration: underline;
     font-weight: bold;
+    color: #FFCB05;
 }
 
 main>section{
@@ -70,7 +88,7 @@ figcaption{
 #intro{
     text-align:center;
     background-color: #f5f5f5;
-    padding: 80px 0px 12px 0px;
+    padding: 100px 0px 12px 0px;
 }
 
 h2{
@@ -133,7 +151,10 @@ color:#00274C;
 #skills article{
     flex-direction: column;
     align-items: center;
-    row-gap: 2em;
+}
+
+#skills article section p{
+    margin: 0px 0px 35px 0px;
 }
 
 footer{
@@ -152,8 +173,73 @@ article section{
     margin: 35px 10px 35px 10px;
 }
 
+.dark-header{
+    background-color: #00274C;
+    border-bottom: #ffffff 2px solid;
+}
+
+.dark-text{
+    color:#ffffff;
+    background-color: #21201E;
+}
+
+.dark-text#intro{
+    color:#ffffff;
+    background-color: #21201E;
+}
+
+.dark-textbox{
+    color:#fff;
+    background-color: #00274C;
+}
+
+.dark-strong{
+    color:#FFCB05;
+}
+
+a.dark_nav{
+    color:#ffffff;
+}
+
+article section.date_vr.dark_date, article section.date_hr.dark_date{
+    color: #FFCB05;
+}
+
+#courses article a.dark_courses{
+    color: #fff;
+}
+
+
 @media only screen and (min-width: 320px) and (max-width: 780px) {
 
+ h1{
+     font-size: 2.5em;
+ }
 
+ h2{
+     font-size: 1.8em;
+ }
 
+ body{
+     font-size: 16px;
+ }
+
+ #intro {
+     padding-top: 80px;
+ }
+
+ main>section{
+    margin-bottom: 2em;
+ }
+
+ .lights{
+     position: relative;
+     left: auto;
+     right: auto;
+     margin-bottom: 1em;
+ }
+
+ footer{
+     text-align: center;
+ }
 }

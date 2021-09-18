@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Allen Mo CV</title>
@@ -19,20 +20,75 @@
             <h1>Allen Mo</h1>
             <nav>
                 <ul>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a class='nav_link' href="#education">Education</a></li>
+                    <li><a class='nav_link' href="#experience">Experience</a></li>
+                    <li><a class='nav_link' href="#courses">Courses</a></li>
+                    <li><a class='nav_link' href="#skills">Skills</a></li>
                 </ul>
             </nav>
         </header>
 
         <section id="intro">
+            <div class="lights">
+                <button id='light_switch' onclick="dark_mode()"><p id="light_text">Turn off lights</p> <span class="material-icons md-dark md-active">lightbulb</span></button>
+            </div>
             <figure>
                 <img src="img/headshot.jpg" alt="Allen Mo's Headshot"/>
                 <figcaption>MSI Cnadidate at the University of Michigan,<br>Specializing in User-Centered Agile Development</figcaption>
             </figure>
         </section>
+        <script>
+            function dark_mode() {
+                if(window.getComputedStyle(document.getElementsByClassName("nav_link")[0]).getPropertyValue("Color") == "rgb(255, 255, 255)"){
+                    document.getElementById("light_text").innerHTML = "Turn off lights";
+                } else{
+                    document.getElementById("light_text").innerHTML = "Turn on lights";
+                }
+
+                var header1 = document.getElementsByTagName('header');
+                var body = document.getElementsByTagName("body");
+                var intro = document.getElementById("intro");
+                var navlinks = document.getElementsByClassName('nav_link');
+                var h1 = document.getElementsByTagName("h1");
+                var h2 = document.getElementsByTagName("h2");
+                var strong = document.getElementsByTagName("strong");
+                var vr_dates = document.getElementsByClassName("date_vr");
+                var hr_dates = document.getElementsByClassName("date_hr");
+                var course_links = document.getElementsByClassName("course_link");
+
+                header1[0].classList.toggle("dark-header");
+                body[0].classList.toggle("dark-text");
+                intro.classList.toggle("dark-text");
+
+                for(i=0;i<h1.length;i++){
+                    h1[i].classList.toggle("dark-strong");
+                }
+
+                for(i=0;i<h2.length;i++){
+                    h2[i].classList.toggle("dark-textbox");
+                }
+
+                for(i=0;i<navlinks.length;i++){
+                    navlinks[i].classList.toggle("dark_nav");
+                }
+
+                for(i=0;i<strong.length;i++){
+                    strong[i].classList.toggle("dark-strong");
+                }
+
+                for(i=0;i<vr_dates.length;i++){
+                    vr_dates[i].classList.toggle("dark_date");
+                }
+
+                for(i=0;i<hr_dates.length;i++){
+                    hr_dates[i].classList.toggle("dark_date");
+                }
+
+                for(i=0;i<course_links.length;i++){
+                    course_links[i].classList.toggle("dark_courses");
+                }
+            }
+        </script>
 
         <section id="education">
             <h2>EDUCATION</h2>
@@ -92,20 +148,20 @@
         <section id="courses">
             <h2>COURSES</h2>
             <article>
-                <a href="https://comminfo.rutgers.edu/academics/courses?courses=202&program=27">Object-Oriented Programming</a>
-                <a href="https://www.si.umich.edu/programs/courses/544">Statistics & Data Analysis</a>
+                <a class="course_link" href="https://comminfo.rutgers.edu/academics/courses?courses=202&program=27">Object-Oriented Programming</a>
+                <a class="course_link" href="https://www.si.umich.edu/programs/courses/544">Statistics & Data Analysis</a>
             </article>
             <article>
-                <a href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-112-data-structures">Data Structures</a>
-                <a href="https://www.si.umich.edu/programs/courses/664">Database App Design</a>
+                <a class="course_link" href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-112-data-structures">Data Structures</a>
+                <a class="course_link" href="https://www.si.umich.edu/programs/courses/664">Database App Design</a>
             </article>
             <article>
-                <a href="https://www.si.umich.edu/programs/courses/539">Complex Web Design</a>
-                <a href="https://www.si.umich.edu/programs/courses/618">Data Manipulation</a>
+                <a class="course_link" href="https://www.si.umich.edu/programs/courses/539">Complex Web Design</a>
+                <a class="course_link" href="https://www.si.umich.edu/programs/courses/618">Data Manipulation</a>
             </article>
             <article>
-                <a href="https://www.si.umich.edu/programs/courses/582">Interaction Design</a>
-                <a href="https://www.si.umich.edu/programs/courses/622">Usability & Needs Evaluation</a>
+                <a class="course_link" href="https://www.si.umich.edu/programs/courses/582">Interaction Design</a>
+                <a class="course_link" href="https://www.si.umich.edu/programs/courses/622">Usability & Needs Evaluation</a>
             </article>
         </section>
 

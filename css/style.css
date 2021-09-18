@@ -143,3 +143,17 @@ footer{
     color:#ffffff;
     font-weight: 800;
 }
+
+article section{
+    margin: 0px 10px 0px 10px;
+}
+
+#courses article{
+    margin: 35px 10px 35px 10px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 780px) {
+
+
+
+}
